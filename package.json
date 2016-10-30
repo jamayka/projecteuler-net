@@ -1,0 +1,23 @@
+{
+  "name": "jamayka-projecteuler",
+  "version": "1.0.0",
+  "description": "projecteuler-net ================",
+  "main": "index.js",
+  "scripts": {
+    "check": "babel-node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamayka/projecteuler-net.git"
+  },
+  "author": "Alexey Khokhryakov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamayka/projecteuler-net/issues"
+  },
+  "homepage": "https://github.com/jamayka/projecteuler-net#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  }
+}
