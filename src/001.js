@@ -1,10 +1,8 @@
+import { range } from './functions'
+
 export default () => ((limit) => {
-    let multiples = (n) => function* (end) {
-            for (let i = n; i < end; i += n) {
-                yield i;
-            }
-        },
-        mergeUnique = (a, b) => [...new Set([...a, ...b])];
-    return mergeUnique(multiples(3)(limit), multiples(5)(limit))
+    let mergeUnique = (a, b) => [...new Set([...a, ...b])];
+
+    return mergeUnique(range(limit - 1, 3, 3), range(limit - 1, 5, 5))
         .reduce((n, m) => n + m, 0);
 })(1000);

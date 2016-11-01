@@ -1,3 +1,5 @@
+import { range } from './functions'
+
 export default () => ((digits) => {
     let
         products = function* (digits) {
@@ -5,8 +7,8 @@ export default () => ((digits) => {
                 max = Math.pow(10, digits) - 1,
                 min = Math.pow(10, digits - 1);
 
-            for (let i = 0; i <= max; i++) {
-                for (let j = Math.ceil(i / 2); j <= i; j++) {
+            for (let i of range(max)) {
+                for (let j of range(i, Math.ceil(i / 2))) {
                     if (max - j > min && max - (i - j) > min) {
                         yield (max - j) * (max - (i - j));
                     }
